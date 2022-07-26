@@ -27,7 +27,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'mosaico', '~> 1.0'
+gem "mosaico", git: "https://github.com/captproton/mosaico-rails", branch: "develop"
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
