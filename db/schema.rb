@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824233755) do
+ActiveRecord::Schema.define(version: 20220726025450) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "mosaico_images", force: :cascade do |t|
     t.string   "file",       null: false
@@ -20,8 +23,8 @@ ActiveRecord::Schema.define(version: 20170824233755) do
     t.string   "mime_type",  null: false
     t.string   "type",       null: false
     t.integer  "parent_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "mosaico_projects", force: :cascade do |t|
@@ -31,6 +34,12 @@ ActiveRecord::Schema.define(version: 20170824233755) do
     t.string   "template_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
