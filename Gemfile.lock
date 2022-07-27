@@ -216,6 +216,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
+  mini_magick (~> 4.8)
   mosaico!
   pg (~> 1.4, >= 1.4.1)
   pry-byebug
